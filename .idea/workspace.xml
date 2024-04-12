@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config>
+        <device id="pixel_c" />
+        <device id="pixel_6_pro" />
+        <device id="pixel_6a" />
+        <device id="pixel_4" />
+        <device id="pixel_6" />
+        <device id="pixel_7_pro" />
+        <device id="pixel_7" />
+        <device id="Nexus 9" />
+      </config>
+    </shared>
+    <layouts>
+      <layout url="file://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-34/data/res/layout/simple_spinner_dropdown_item.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_change_pw.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_openning_sreen.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_otp.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_password_changed.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/add_area_layout.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/add_device_layout.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/add_device_room_layout.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/add_room_layout.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/device_detail.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/edit_room_layout.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_account.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_air.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_detail.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_device.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_device_detail.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fan.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_item_home.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_item_home_list.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_lamp.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_web.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_device.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_room.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_edit.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
+    </layouts>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7229b9a8-62a0-4554-8f7a-09c8217f46c1" name="Changes" comment="update code">
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/account_page/AccountFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/account_page/AccountFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_openning_sreen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_openning_sreen.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\haininh\.android\avd\Pixel_Tablet_API_25.avd]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="resourceFile" />
+        <option value="Kotlin Class" />
+        <option value="valueResourceFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1712918953" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b4f3deee-f6d8-4e5f-977f-f797abbf7ac1" />
+        <option name="url" value="https://github.com/NinhLuong/iot_app.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2VEwC9qukjNWzQAc2Z27ZRp2bhK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;android-custom-viewC:/Users/haininh/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.3.0/f4de7876e10ff121102f131b26d4a98b1613a012/recyclerview-1.3.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED&quot;: &quot;RecyclerView&quot;,
+    &quot;android-custom-viewC:/Users/haininh/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.3.2/7bc0f04ccbe0159dc303408af769dc1bbb80d584/recyclerview-1.3.2-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED&quot;: &quot;RecyclerView&quot;,
+    &quot;android-custom-viewC:/Users/haininh/.gradle/caches/modules-2/files-2.1/com.github.mukeshsolanki.android-otpview-pinview/otpview/3.1.0/683402d711a0a96f95c2ce59b0e10f9b55602794/otpview-3.1.0-sources.jar!/com/mukeshsolanki/OtpView.java_SELECTED&quot;: &quot;OtpView&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_directory_selection&quot;: &quot;D:/android/iot_app/app/src/main/res/drawable&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/android/JavaWebRTCYouTube&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;recommended.upgrade.do.not.ask.for.project&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="PsdUISettings">
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\android\iot_app\app\src\main\res\drawable" />
+      <recent name="D:\android\iot_app\app\src\main\res\layout" />
+      <recent name="D:\android\iot_app\app\src\main\res" />
+      <recent name="D:\android\iot_app\app\src\main\res\values" />
+    </key>
+    <key name="android.template.529567553">
+      <recent name="com.example.iot_app.sign_up" />
+    </key>
+    <key name="android.template.1663255944">
+      <recent name="com.example.iot_app" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.example.iot_app" />
+    </key>
+    <key name="android.template.-494420108">
+      <recent name="com.example.iot_app" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.iot_app.home_page" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle signingreport  " />
+    </option>
+  </component>
+  <component name="RunManager" selected="Android App.app">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="iot_app.app.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="iot_app [signingreport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="signingreport" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="iot_app" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Android App.app" />
+      <item itemvalue="Gradle.iot_app" />
+      <item itemvalue="Gradle.iot_app [signingreport]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.iot_app [signingreport]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7229b9a8-62a0-4554-8f7a-09c8217f46c1" name="Changes" comment="" />
+      <created>1694414416381</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694414416381</updated>
+      <workItem from="1700883698507" duration="95000" />
+      <workItem from="1701613484458" duration="24000" />
+    </task>
+    <task id="LOCAL-00001" summary="add layout login, signup">
+      <created>1694485067443</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694485067443</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update code">
+      <created>1694489600787</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694489600787</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update code">
+      <created>1694491155060</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694491155060</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;app/src/main/java/com/example/iot_app/LoginActivity.java">
+      <created>1694491470086</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694491470086</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix error getRoot()">
+      <created>1694528491269</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1694528491269</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix error getRoot()">
+      <created>1694528874512</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1694528874512</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add commend">
+      <created>1694614210307</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1694614210307</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add code RecyclerView">
+      <created>1695797675873</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695797675874</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add code button add">
+      <created>1696263986973</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696263986973</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add code add device, room">
+      <created>1696307510735</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696307510735</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add code delete">
+      <created>1696320862090</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1696320862090</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add code curtom button add">
+      <created>1696336496512</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1696336496512</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add code save status">
+      <created>1696343938383</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1696343938383</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add code to custom UI">
+      <created>1696347514442</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1696347514442</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add code to go back use button">
+      <created>1696389409310</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1696389409310</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add code custom and common">
+      <created>1696413774134</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1696413774134</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add code custom and common">
+      <created>1696482563514</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1696482563514</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add code OtpView">
+      <created>1700584552728</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1700584552728</updated>
+    </task>
+    <task id="LOCAL-00019" summary="add layout">
+      <created>1700671820265</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1700671820265</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add layout">
+      <created>1700754204941</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1700754204941</updated>
+    </task>
+    <task id="LOCAL-00021" summary="add code layout">
+      <created>1701093567222</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1701093567222</updated>
+    </task>
+    <task id="LOCAL-00022" summary="add code sign-in, sign-up and connect firebase">
+      <created>1701102885647</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1701102885647</updated>
+    </task>
+    <task id="LOCAL-00023" summary="add code otp">
+      <created>1701389422563</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1701389422563</updated>
+    </task>
+    <task id="LOCAL-00024" summary="update code">
+      <option name="closed" value="true" />
+      <created>1702397184384</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1702397184384</updated>
+    </task>
+    <task id="LOCAL-00025" summary="update code">
+      <option name="closed" value="true" />
+      <created>1702397239267</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1702397239267</updated>
+    </task>
+    <task id="LOCAL-00026" summary="update code add full func not data">
+      <option name="closed" value="true" />
+      <created>1702919139376</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1702919139376</updated>
+    </task>
+    <task id="LOCAL-00027" summary="update code add full func control device">
+      <option name="closed" value="true" />
+      <created>1702987066087</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1702987066087</updated>
+    </task>
+    <task id="LOCAL-00028" summary="update code add full func control device and update data">
+      <option name="closed" value="true" />
+      <created>1703001743716</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1703001743716</updated>
+    </task>
+    <task id="LOCAL-00029" summary="update code add full func control device and update data">
+      <option name="closed" value="true" />
+      <created>1703049468933</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1703049468933</updated>
+    </task>
+    <task id="LOCAL-00030" summary="update code custom lamp">
+      <option name="closed" value="true" />
+      <created>1703090542812</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1703090542812</updated>
+    </task>
+    <task id="LOCAL-00031" summary="update code custom air, fan">
+      <option name="closed" value="true" />
+      <created>1703177305645</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1703177305645</updated>
+    </task>
+    <task id="LOCAL-00032" summary="update code">
+      <option name="closed" value="true" />
+      <created>1703261126968</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1703261126968</updated>
+    </task>
+    <task id="LOCAL-00033" summary="update code">
+      <option name="closed" value="true" />
+      <created>1703263376543</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1703263376543</updated>
+    </task>
+    <task id="LOCAL-00034" summary="update code">
+      <option name="closed" value="true" />
+      <created>1703266079056</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1703266079056</updated>
+    </task>
+    <task id="LOCAL-00035" summary="update code">
+      <option name="closed" value="true" />
+      <created>1703266648965</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1703266648965</updated>
+    </task>
+    <task id="LOCAL-00036" summary="update code">
+      <option name="closed" value="true" />
+      <created>1703268126612</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1703268126612</updated>
+    </task>
+    <task id="LOCAL-00037" summary="update code">
+      <option name="closed" value="true" />
+      <created>1703269188497</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1703269188497</updated>
+    </task>
+    <task id="LOCAL-00038" summary="update code">
+      <option name="closed" value="true" />
+      <created>1703292581778</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1703292581778</updated>
+    </task>
+    <task id="LOCAL-00039" summary="update code">
+      <option name="closed" value="true" />
+      <created>1703293895067</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1703293895067</updated>
+    </task>
+    <task id="LOCAL-00040" summary="update code">
+      <option name="closed" value="true" />
+      <created>1703295764531</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1703295764531</updated>
+    </task>
+    <task id="LOCAL-00041" summary="update code">
+      <option name="closed" value="true" />
+      <created>1703297187155</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1703297187155</updated>
+    </task>
+    <task id="LOCAL-00042" summary="update code">
+      <option name="closed" value="true" />
+      <created>1703346846895</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1703346846895</updated>
+    </task>
+    <task id="LOCAL-00043" summary="update code">
+      <option name="closed" value="true" />
+      <created>1712918458187</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1712918458187</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/update_code" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Creat project" />
+    <MESSAGE value="add layout login, signup" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;app/src/main/java/com/example/iot_app/LoginActivity.java" />
+    <MESSAGE value="fix error getRoot()" />
+    <MESSAGE value="add commend" />
+    <MESSAGE value="add code RecyclerView" />
+    <MESSAGE value="add code button add" />
+    <MESSAGE value="add code add device, room" />
+    <MESSAGE value="add code delete" />
+    <MESSAGE value="add code curtom button add" />
+    <MESSAGE value="add code save status" />
+    <MESSAGE value="add code to custom UI" />
+    <MESSAGE value="add code to go back use button" />
+    <MESSAGE value="add code custom and common" />
+    <MESSAGE value="add code OtpView" />
+    <MESSAGE value="add layout" />
+    <MESSAGE value="add code layout" />
+    <MESSAGE value="add code sign-in, sign-up and connect firebase" />
+    <MESSAGE value="add code otp" />
+    <MESSAGE value="update code add full func not data" />
+    <MESSAGE value="update code add full func control device" />
+    <MESSAGE value="update code add full func control device and update data" />
+    <MESSAGE value="update code custom lamp" />
+    <MESSAGE value="update code custom air, fan" />
+    <MESSAGE value="update code" />
+    <option name="LAST_COMMIT_MESSAGE" value="update code" />
+  </component>
+</project>
