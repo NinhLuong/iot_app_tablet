@@ -9,7 +9,7 @@
     tools:context=".webview_page.WebFragment">
 
 
-    <LinearLayout
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
@@ -27,16 +27,22 @@
         <ScrollView
             android:id="@+id/scv_list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="50dp">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp" />
         </ScrollView>
-    </LinearLayout>
+    </LinearLayout>-->
+
+    <Button
+        android:id="@+id/btn_call_t"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="Call" />
 
     <!--    <WebView
             android:id="@+id/map_webView"

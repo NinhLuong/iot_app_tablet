@@ -45,12 +45,14 @@ public class WebFragment extends Fragment {
         Uri skypeUri = Uri.parse(mySkypeUri);
         Intent myIntent = new Intent(Intent.ACTION_VIEW, skypeUri);
 
-        // Restrict the Intent to being handled by the Skype for Android client only.
-        myIntent.setComponent(new ComponentName("com.skype.raider", "com.skype.raider.Main"));
-        myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-        myContext.startActivity(myIntent);
-
+        // Check if there is an activity available that can handle the intent
+        if (myIntent.resolveActivity(myContext.getPackageManager()) != null) {
+            myContext.startActivity(myIntent);
+        } else {
+            Toast.makeText(myContext, "No application can handle this request."
+                    + " Please install a webbrowser",  Toast.LENGTH_LONG).show();
+            myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.skype.com"));
+        }
         return;
     }
 
@@ -77,7 +79,7 @@ public class WebFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_web, container, false);
 
-        Button callButton = rootView.findViewById(R.id.btn_call);
+        Button callButton = rootView.findViewById(R.id.btn_call_t);
         callButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

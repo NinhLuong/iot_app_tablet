@@ -13,6 +13,8 @@ import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -97,6 +99,10 @@ public class HomeFragment extends Fragment {
         fragmentContext = context;
     }
 
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("rooms");
+    DatabaseReference myRefBot = database.getReference("robot");
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -111,13 +117,26 @@ public class HomeFragment extends Fragment {
             getActivity().startService(intent);
         }
 
+        myRefBot.child("SOS").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (!dataSnapshot.exists()) {
+                    // if "SOS" does not exist, create it and set its value to "false"
+                    myRefBot.child("SOS").setValue("false");
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.d("FirebaseDatabase error", "child SOS error!");
+            }
+        });
 
         java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
         String formattedDate = sdf.format(new java.util.Date());
 
         mainActivity = (MainActivity) getActivity();
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("rooms");
+
         Temperature = view.findViewById(R.id.numTemp);
         Humidity = view.findViewById(R.id.numHum);
 
@@ -126,8 +145,8 @@ public class HomeFragment extends Fragment {
         dateTime = view.findViewById(R.id.textDateTime);
 
         dateTime.setText(formattedDate);
-        DatabaseReference tempRef = myRef.child(name).child("Temp");
-        /*tempRef.addValueEventListener(new ValueEventListener() {
+        /*DatabaseReference tempRef = myRef.child(name).child("Temp");
+        tempRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // Get the data from the snapshot
@@ -147,13 +166,6 @@ public class HomeFragment extends Fragment {
             }
         });*/
 
-        /*locationManager = (LocationManager) requireActivity().getSystemService(Context.LOCATION_SERVICE);
-
-        if (ContextCompat.checkSelfPermission(fragmentContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION_PERMISSION);
-        } else {
-            startLocationUpdates();
-        }*/
 
         userName = view.findViewById(R.id.userName);
         rcvData = view.findViewById(R.id.rcv_data);
@@ -220,9 +232,7 @@ public class HomeFragment extends Fragment {
                             // Create a new Room object with default image, name from 'edtNameRoom', and "0 device".
                             myRef.child(name).child("Temp").setValue("null");
                             myRef.child(name).child("Hum").setValue("null");
-                            myRef.child(name).child("SOS").setValue("false");
-                            myRef.child(name).child("Longitude").setValue(longitude);
-                            myRef.child(name).child("Latitude").setValue(latitude);
+
 
                             viewModel.addRoom(newRoom);
                             // Add the new room to SharedViewModel.
@@ -245,25 +255,43 @@ public class HomeFragment extends Fragment {
         // Set the adapter for 'rcvData' to be 'roomAdapter'.
         rcvData.setAdapter(roomAdapter);
 
+        locationManager = (LocationManager) requireActivity().getSystemService(Context.LOCATION_SERVICE);
+
+        if (ContextCompat.checkSelfPermission(fragmentContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION_PERMISSION);
+        } else {
+            startLocationUpdates();
+        }
+
+        if (ContextCompat.checkSelfPermission(fragmentContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // Request the permission
+            requestPermissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION);
+        } else {
+            startLocationUpdates();
+        }
+
         return view;
     }
 
-    /*private void startLocationUpdates() {
-        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                // Check if the app has location permission again (just in case)
-                // Check if the app has location permission again (just in case)
-                if (ContextCompat.checkSelfPermission(fragmentContext, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-                    *//*locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);*//*
+    private void startLocationUpdates() {
+    new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+        @Override
+        public void run() {
+            // Check if the app has location permission again (just in case)
+            if (ContextCompat.checkSelfPermission(fragmentContext, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                // Check if the "network" provider is available
+                try {
+                    locationManager.getProvider(LocationManager.NETWORK_PROVIDER);
                     locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
+                } catch (IllegalArgumentException e) {
+                    Log.e("Location", "Network provider does not exist", e);
+                    // Handle the case where the network provider does not exist
                 }
             }
-        }, 2000);
-
-    }*/
-
-    /*private final LocationListener locationListener = new LocationListener() {
+        }
+    }, 2000);
+}
+    private final LocationListener locationListener = new LocationListener() {
         @Override
         public void onLocationChanged(@NonNull Location location) {
             // Get location
@@ -271,6 +299,8 @@ public class HomeFragment extends Fragment {
              Log.d("latitude", latitude);
              longitude = String.valueOf(location.getLongitude());
             Log.d("longitude", longitude);
+            myRefBot.child("Longitude").setValue(longitude);
+            myRefBot.child("Latitude").setValue(latitude);
 
             // Get city information from latitude and longitude
             getCityInfo(latitude, longitude);
@@ -294,17 +324,15 @@ public class HomeFragment extends Fragment {
         }
     };
 
-    @Override
-    public final void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (requestCode == REQUEST_LOCATION_PERMISSION) {
-            if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                startLocationUpdates();
-            }
-            else{
-                //user denied the permission
-            }
-        }
-    }
+    // Define this as a member variable
+    private final ActivityResultLauncher<String> requestPermissionLauncher =
+            registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
+                if (isGranted) {
+                    startLocationUpdates();
+                } else {
+                    //user denied the permission
+                }
+            });
 
     final String nominatimUrl = "https://nominatim.openstreetmap.org/reverse";
     final String format = "json";
@@ -411,6 +439,6 @@ public class HomeFragment extends Fragment {
                 }
             }
         });
-    }*/
+    }
 
 }
