@@ -1,11 +1,15 @@
 package com.example.iot_app.webview_page;
 
+import android.app.Dialog;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.OpenableColumns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,22 +21,38 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.iot_app.device.FanFragment;
 import com.example.iot_app.R;
 import com.example.iot_app.device.AirFragment;
 import com.example.iot_app.device.LampFragment;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
 
 public class WebFragment extends Fragment {
-    private WebView myWebView;
-
+//    private WebView myWebView;
+    private RecyclerView rcvPerson;
+    private PersonAdapter personAdapter;
+    private List<Person> listPerson;
+    private TextView txtNameImg;
     public void initiateSkypeUri(Context myContext, String mySkypeUri) {
 
         // Make sure the Skype for Android client is installed.
@@ -79,45 +99,101 @@ public class WebFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_web, container, false);
 
-        Button callButton = rootView.findViewById(R.id.btn_call_t);
-        callButton.setOnClickListener(new View.OnClickListener() {
+        rcvPerson = rootView.findViewById(R.id.rcv_person);
+        FloatingActionButton btnAdPerson = rootView.findViewById(R.id.btnAddPerson);
+        btnAdPerson.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String skypeId = "live:.cid.f3b242efa0f1ec30"; // replace with the Skype ID you want to call
-                initiateSkypeUri(getContext(), "skype:" + skypeId + "?call&video=true");
-            }
-        });
-       /* myWebView = (WebView) rootView.findViewById(R.id.map_webView);
-        myWebView.loadUrl("https://meet.google.com/");
+                Dialog dialog = new Dialog(getContext());
+                dialog.setContentView(R.layout.add_person_layout);
 
-        // Enable Javascript
-        WebSettings webSettings = myWebView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        webSettings.setMediaPlaybackRequiresUserGesture(false);
-        webSettings.setDomStorageEnabled(true);
+                EditText edtNamePerson = dialog.findViewById(R.id.edtNamePerson);
+                EditText edtPhoneNum = dialog.findViewById(R.id.edtPhoneNum);
+                Button btnChooseImage = dialog.findViewById(R.id.btn_choose_img);
+                txtNameImg = dialog.findViewById(R.id.txt_name_img);
 
-        // Enable cookies
-        CookieManager.getInstance().setAcceptCookie(true);
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-            CookieManager.getInstance().setAcceptThirdPartyCookies(myWebView, true);
-        }
-
-        // Force links and redirects to open in the WebView instead of in a browser
-        myWebView.setWebViewClient(new WebViewClient());
-
-        // Set a WebChromeClient to handle permission requests
-        myWebView.setWebChromeClient(new WebChromeClient() {
-            @Override
-            public void onPermissionRequest(final PermissionRequest request) {
-                getActivity().runOnUiThread(new Runnable() {
+                btnChooseImage.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void run() {
-                        request.grant(request.getResources());
+                    public void onClick(View v) {
+                        mGetContent.launch("image/*");
                     }
                 });
+
+                Button btnAddArea = dialog.findViewById(R.id.btnAddArea);
+                btnAddArea.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String name = edtNamePerson.getText().toString();
+                        String phoneNum = edtPhoneNum.getText().toString();
+
+                        if (name.isEmpty() || phoneNum.isEmpty()) {
+                            Toast.makeText(getContext(), "Please enter all information", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Person person = new Person(name, phoneNum, txtNameImg.getText().toString());
+                            personAdapter.addPerson(person);
+                            dialog.dismiss();
+                        }
+                    }
+                });
+
+                dialog.show();
             }
-        });*/
+        });
+        loadPersons();
 
         return rootView;
+    }
+    private void savePersons() {
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences("persons", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(listPerson);
+        editor.putString("personList", json);
+        editor.apply();
+    }
+
+    private void loadPersons() {
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences("persons", Context.MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json = sharedPreferences.getString("personList", null);
+        Type type = new TypeToken<ArrayList<Person>>() {}.getType();
+        listPerson = gson.fromJson(json, type);
+
+        if (listPerson == null) {
+            listPerson = new ArrayList<>();
+        }
+    }
+
+    private final ActivityResultLauncher<String> mGetContent = registerForActivityResult(
+            new ActivityResultContracts.GetContent(),
+            new ActivityResultCallback<Uri>() {
+                @Override
+                public void onActivityResult(Uri uri) {
+                    // Handle the returned Uri
+                    String imageName = getImageName(uri);
+                    txtNameImg.setText(imageName);
+                }
+            });
+
+    private String getImageName(Uri uri) {
+        String result = null;
+        if (uri.getScheme().equals("content")) {
+            Cursor cursor = getContext().getContentResolver().query(uri, null, null, null, null);
+            try {
+                if (cursor != null && cursor.moveToFirst()) {
+                    result = cursor.getString(cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME));
+                }
+            } finally {
+                cursor.close();
+            }
+        }
+        if (result == null) {
+            result = uri.getPath();
+            int cut = result.lastIndexOf('/');
+            if (cut != -1) {
+                result = result.substring(cut + 1);
+            }
+        }
+        return result;
     }
 }

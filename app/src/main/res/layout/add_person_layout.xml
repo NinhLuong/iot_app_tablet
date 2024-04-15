@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/add_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtNameArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5sp"
+        android:text="Thêm thông tin liên lạc"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtNamePerson"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/background_edit_add"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Nhập họ và tên"
+        android:textColorHint="#707070"
+        android:gravity="center"
+        android:textColor="#707070"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10sp"
+        android:layout_marginEnd="10sp"/>
+
+    <EditText
+        android:id="@+id/edtPhoneNum"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/background_edit_add"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Nhập số điện thoại"
+        android:textColorHint="#707070"
+        android:gravity="center"
+        android:textColor="#707070"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10sp"
+        android:layout_marginEnd="10sp"/>
+
+
+
+    <!--<EditText
+        android:id="@+id/edtLongi"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/background_edit_add"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Nhập kinh độ "
+        android:textColorHint="#707070"
+        android:gravity="center"
+        android:textColor="#707070"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10sp"
+        android:layout_marginEnd="10sp"/>-->
+
+    <!--<EditText
+        android:id="@+id/edtNumDevice"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/background_edit_add"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Nhập số thiết bị "
+        android:textColorHint="#707070"
+        android:gravity="center"
+        android:textColor="#707070"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="10sp"
+        android:layout_marginEnd="10sp"/>-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_name_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Image Default"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_choose_img"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="Choose image" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15sp">
+
+
+        <Button
+            android:id="@+id/btnAddArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:text="Add" />
+    </RelativeLayout>
+
+</LinearLayout>

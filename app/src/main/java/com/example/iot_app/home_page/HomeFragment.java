@@ -115,6 +115,7 @@ public class HomeFragment extends Fragment {
             getActivity().startForegroundService(intent);
         } else {
             getActivity().startService(intent);
+
         }
 
         myRefBot.child("SOS").addListenerForSingleValueEvent(new ValueEventListener() {

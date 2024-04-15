@@ -6,12 +6,13 @@ public class Person {
     private String name;
     private String phone_number;
     private int resourceId;
+    private String imageUri;
     private ArrayList<Person> persons;
 
-    public Person(String name, String phone_number, int resourceId) {
+    public Person(String name, String phone_number, String imageUri) {
         this.name = name;
         this.phone_number = phone_number;
-        this.resourceId = resourceId;
+        this.imageUri = imageUri;
         this.persons = new ArrayList<>();
     }
 
@@ -41,6 +42,13 @@ public class Person {
 
     public void setResourceId(final int resourceId) {
         this.resourceId = resourceId;
+    }
+    public String getImageUri() {
+        return this.imageUri;
+    }
+
+    public void setImageUri(final String imageUri) {
+        this.imageUri = imageUri;
     }
 
     public void setPersons(final ArrayList<Person> persons) {
