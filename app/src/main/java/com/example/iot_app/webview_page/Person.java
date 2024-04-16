@@ -7,6 +7,16 @@ public class Person {
     private String phone_number;
     private int resourceId;
     private String imageUri;
+
+    public void setImageName(final String imageName) {
+        this.imageName = imageName;
+    }
+
+    public String getImageName() {
+        return this.imageName;
+    }
+
+    private String imageName;
     private ArrayList<Person> persons;
 
     public Person(String name, String phone_number, String imageUri) {

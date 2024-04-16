@@ -38,8 +38,12 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonView
         if (person == null) {
             return;
         }
-        Uri imageUri = Uri.parse(person.getImageUri());
-        holder.imageAvatar.setImageURI(imageUri);
+        String imageUri = person.getImageUri();
+        if (imageUri == null || imageUri.equals("Image Default")) {
+            holder.imageAvatar.setImageResource(R.drawable.img_ava);
+        } else {
+            holder.imageAvatar.setImageURI(Uri.parse(imageUri));
+        }
         holder.txt_name.setText(person.getName());
         holder.txt_phone_number.setText(person.getPhone_number());
 
@@ -73,7 +77,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonView
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mListPerson.size();
     }
 
     public void addPerson(Person person) {

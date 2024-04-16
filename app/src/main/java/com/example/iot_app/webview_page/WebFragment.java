@@ -33,6 +33,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.iot_app.device.FanFragment;
@@ -53,6 +54,9 @@ public class WebFragment extends Fragment {
     private PersonAdapter personAdapter;
     private List<Person> listPerson;
     private TextView txtNameImg;
+    public String imgName;
+    public String stringUri;
+
     public void initiateSkypeUri(Context myContext, String mySkypeUri) {
 
         // Make sure the Skype for Android client is installed.
@@ -65,13 +69,24 @@ public class WebFragment extends Fragment {
         Uri skypeUri = Uri.parse(mySkypeUri);
         Intent myIntent = new Intent(Intent.ACTION_VIEW, skypeUri);
 
-        // Check if there is an activity available that can handle the intent
+        // Restrict the Intent to being handled by the Skype for Android client only.
+        myIntent.setComponent(new ComponentName("com.skype.raider", "com.skype.raider.Main"));
+        myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+        // Initiate the Intent. It should never fail because you've already established the
+        // presence of its handler (although there is an extremely minute window where this could fail,
+        // but you don't need to worry about that here).
+        myContext.startActivity(myIntent);
+
+        return;
+    }
+
+    public void goToMarket(Context myContext) {
+        Uri marketUri = Uri.parse("market://details?id=com.skype.raider");
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, marketUri);
+        myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         if (myIntent.resolveActivity(myContext.getPackageManager()) != null) {
             myContext.startActivity(myIntent);
-        } else {
-            Toast.makeText(myContext, "No application can handle this request."
-                    + " Please install a webbrowser",  Toast.LENGTH_LONG).show();
-            myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.skype.com"));
         }
         return;
     }
@@ -86,21 +101,21 @@ public class WebFragment extends Fragment {
         }
         return (true);
     }
-
-    public void goToMarket(Context myContext) {
-        Uri marketUri = Uri.parse("market://details?id=com.skype.raider");
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, marketUri);
-        myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        myContext.startActivity(myIntent);
-
-        return;
-    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_web, container, false);
 
         rcvPerson = rootView.findViewById(R.id.rcv_person);
         FloatingActionButton btnAdPerson = rootView.findViewById(R.id.btnAddPerson);
+
+        // Initialize the PersonAdapter
+        if (rcvPerson != null) {
+            // Set the layout manager
+            rcvPerson.setLayoutManager(new LinearLayoutManager(getContext()));
+            // Initialize the PersonAdapter
+            personAdapter = new PersonAdapter(new ArrayList<>());
+            rcvPerson.setAdapter(personAdapter);
+        }
         btnAdPerson.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -119,8 +134,8 @@ public class WebFragment extends Fragment {
                     }
                 });
 
-                Button btnAddArea = dialog.findViewById(R.id.btnAddArea);
-                btnAddArea.setOnClickListener(new View.OnClickListener() {
+                Button btnAddInfor = dialog.findViewById(R.id.btnAddInfor);
+                btnAddInfor.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         String name = edtNamePerson.getText().toString();
@@ -129,8 +144,10 @@ public class WebFragment extends Fragment {
                         if (name.isEmpty() || phoneNum.isEmpty()) {
                             Toast.makeText(getContext(), "Please enter all information", Toast.LENGTH_SHORT).show();
                         } else {
-                            Person person = new Person(name, phoneNum, txtNameImg.getText().toString());
+                            Person person = new Person(name, phoneNum, stringUri);
                             personAdapter.addPerson(person);
+                            savePersons();
+                            personAdapter.notifyDataSetChanged();
                             dialog.dismiss();
                         }
                     }
@@ -139,7 +156,13 @@ public class WebFragment extends Fragment {
                 dialog.show();
             }
         });
+
+        // Load the list of persons from SharedPreferences
         loadPersons();
+
+        // Initialize the PersonAdapter with the loaded list of persons
+        personAdapter = new PersonAdapter(listPerson);
+        rcvPerson.setAdapter(personAdapter);
 
         return rootView;
     }
@@ -170,8 +193,22 @@ public class WebFragment extends Fragment {
                 @Override
                 public void onActivityResult(Uri uri) {
                     // Handle the returned Uri
-                    String imageName = getImageName(uri);
-                    txtNameImg.setText(imageName);
+                    /*String imageName;
+                    if (uri != null) {
+                        imageName = getImageName(uri);
+                    } else {
+                        imageName = "Image Default";
+                    }
+                    txtNameImg.setText(imageName);*/
+
+                    // Handle the returned Uri
+                    if (uri != null) {
+                        imgName = getImageName(uri);
+                        stringUri = uri.toString();
+                        txtNameImg.setText(imgName);
+                    } else {
+                        txtNameImg.setText("Image Default");
+                    }
                 }
             });
 
@@ -181,7 +218,13 @@ public class WebFragment extends Fragment {
             Cursor cursor = getContext().getContentResolver().query(uri, null, null, null, null);
             try {
                 if (cursor != null && cursor.moveToFirst()) {
-                    result = cursor.getString(cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME));
+                    int columnIndex = cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME);
+                    if (columnIndex != -1) {
+                        result = cursor.getString(columnIndex);
+                    } else {
+                        // Handle the case where the DISPLAY_NAME column doesn't exist
+                        // For example, set a default value or throw an exception
+                    }
                 }
             } finally {
                 cursor.close();
