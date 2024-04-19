@@ -7,8 +7,8 @@
 
     <ImageView
         android:id="@+id/img_person"
-        android:layout_width="400dp"
-        android:layout_height="200dp"
+        android:layout_width="600dp"
+        android:layout_height="280dp"
         android:layout_weight="1"
         tools:srcCompat="@tools:sample/avatars" />
 
@@ -50,7 +50,7 @@
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="200dp"
+                android:layout_marginLeft="50dp"
                 android:text="Số điện thoại: "
                 android:textColor="#FF9800"
                 android:textSize="30dp"

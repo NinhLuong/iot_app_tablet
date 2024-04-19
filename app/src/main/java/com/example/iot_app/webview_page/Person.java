@@ -7,23 +7,42 @@ public class Person {
     private String phone_number;
     private int resourceId;
     private String imageUri;
-
-    public void setImageName(final String imageName) {
-        this.imageName = imageName;
+    private String skypeId;
+    public String getSkypeId() {
+        return this.skypeId;
     }
 
-    public String getImageName() {
-        return this.imageName;
+    public void setSkypeId(final String skypeId) {
+        this.skypeId = skypeId;
     }
 
-    private String imageName;
     private ArrayList<Person> persons;
+    private int imageResId;
 
-    public Person(String name, String phone_number, String imageUri) {
+    public Person(String name, String phone_number, int imageResId, String skypeId) {
+        // Other initializations...
+        this.name = name;
+        this.phone_number = phone_number;
+        this.imageResId = imageResId;
+        this.skypeId = skypeId;
+    }
+
+    public Person(String name, String phone_number, String imageUri, String skypeId) {
         this.name = name;
         this.phone_number = phone_number;
         this.imageUri = imageUri;
+        this.skypeId = skypeId;
         this.persons = new ArrayList<>();
+    }
+
+    // Change this method to return an int
+    public int getImageResId() {
+        return this.imageResId;
+    }
+
+    // Change this method to accept an int parameter
+    public void setImageResId(final int imageResId) {
+        this.imageResId = imageResId;
     }
 
     public String getName() {

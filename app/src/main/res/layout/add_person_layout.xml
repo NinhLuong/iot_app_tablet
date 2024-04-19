@@ -48,20 +48,20 @@
 
 
 
-    <!--<EditText
-        android:id="@+id/edtLongi"
+    <EditText
+        android:id="@+id/edtSkypeId"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/background_edit_add"
         android:ems="10"
         android:inputType="text"
-        android:hint="Nhập kinh độ "
+        android:hint="Nhập Skype Id "
         android:textColorHint="#707070"
         android:gravity="center"
         android:textColor="#707070"
         android:layout_marginTop="20dp"
         android:layout_marginStart="10sp"
-        android:layout_marginEnd="10sp"/>-->
+        android:layout_marginEnd="10sp"/>
 
     <!--<EditText
         android:id="@+id/edtNumDevice"
