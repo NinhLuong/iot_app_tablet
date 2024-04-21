@@ -172,12 +172,15 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7229b9a8-62a0-4554-8f7a-09c8217f46c1" name="Changes" comment="add code web fragment add information(name, phone, image) and save image but when reopen will lost image">
+    <list default="true" id="7229b9a8-62a0-4554-8f7a-09c8217f46c1" name="Changes" comment="add code web fragment add information(name, phone, image) and save image fix error when reopen will lost image">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/webview_page/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/webview_page/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/StatusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/StatusService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/webview_page/PersonAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/webview_page/PersonAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/webview_page/WebFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/webview_page/WebFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/add_person_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/add_person_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/det.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/tran_tram_cut.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/van_chau.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/van_chau.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_person.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_person.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -188,7 +191,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\haininh\.android\avd\Pixel_Tablet_API_25.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[192.168.1.100:5555]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -822,7 +825,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713253646365</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="add code web fragment add information(name, phone, image) and save image fix error when reopen will lost image">
+      <option name="closed" value="true" />
+      <created>1713531509953</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1713531509953</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -852,7 +863,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add commend" />
     <MESSAGE value="add code RecyclerView" />
     <MESSAGE value="add code button add" />
     <MESSAGE value="add code add device, room" />
@@ -877,6 +887,7 @@
     <MESSAGE value="add code web fragment can call" />
     <MESSAGE value="add code web fragment add information" />
     <MESSAGE value="add code web fragment add information(name, phone, image) and save image but when reopen will lost image" />
-    <option name="LAST_COMMIT_MESSAGE" value="add code web fragment add information(name, phone, image) and save image but when reopen will lost image" />
+    <MESSAGE value="add code web fragment add information(name, phone, image) and save image fix error when reopen will lost image" />
+    <option name="LAST_COMMIT_MESSAGE" value="add code web fragment add information(name, phone, image) and save image fix error when reopen will lost image" />
   </component>
 </project>

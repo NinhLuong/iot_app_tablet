@@ -14,13 +14,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.CookieManager;
-import android.webkit.PermissionRequest;
-import android.webkit.WebChromeClient;
-import android.webkit.WebResourceRequest;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -37,10 +31,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.iot_app.device.FanFragment;
 import com.example.iot_app.R;
-import com.example.iot_app.device.AirFragment;
-import com.example.iot_app.device.LampFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -53,7 +44,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WebFragment extends Fragment {
-//    private WebView myWebView;
+
     private RecyclerView rcvPerson;
     private PersonAdapter personAdapter;
     private List<Person> listPerson;
@@ -147,20 +138,18 @@ public class WebFragment extends Fragment {
         Type type = new TypeToken<ArrayList<Person>>() {}.getType();
         listPerson = gson.fromJson(json, type);
 
-
         if (listPerson == null) {
-           listPerson = new ArrayList<>();
-            /*listPerson.add(new Person("Lê Phan Nguyên Đạt", "0943205123", R.drawable.det, "live:.cid.f3b242efa0f1ec30"));
-            listPerson.add(new Person("Trần Thị Ngọc Trâm", "0943205123", R.drawable.tran_tram_cut, "live:.cid.1d3e048641a89a6b"));
-            listPerson.add(new Person("Nguyễn Ngọc Vân Châu", "0943205123", R.drawable.van_chau, "live:.cid.255c8733b13201a"));*/
-        } else {
-            for (Person person : listPerson) {
-                String imageUri = person.getImageUri();
-                Log.d("imageUri", imageUri);
-                if (imageUri != null && !imageUri.equals("Image Default")) {
-                    // Set the image URI for this Person
-                    person.setImageUri(imageUri);
-                }
+            listPerson = new ArrayList<>();
+            listPerson.add(new Person("Lê Phan Nguyên Đạt", "0943205123", R.drawable.img_ava, "live:.cid.f3b242efa0f1ec30"));
+            listPerson.add(new Person("Trần Thị Ngọc Trâm", "0853161892", R.drawable.img_ava, "live:.cid.1d3e048641a89a6b"));
+            listPerson.add(new Person("Nguyễn Ngọc Vân Châu", "0971314205", R.drawable.img_ava, "live:.cid.255c8733b13201a"));
+            savePersons();
+        }
+
+        for (Person person : listPerson) {
+            String imageUri = person.getImageUri();
+            if (imageUri != null && !imageUri.equals("Image Default")) {
+                person.setImageUri(imageUri);
             }
         }
         Log.d("WebFragment", "List after loading: " + listPerson.toString());
@@ -262,4 +251,5 @@ public class WebFragment extends Fragment {
         }
         return result;
     }
+
 }

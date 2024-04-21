@@ -40,24 +40,13 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonView
         Uri skypeUri = Uri.parse(mySkypeUri);
         Intent myIntent = new Intent(Intent.ACTION_VIEW, skypeUri);
 
-        // Restrict the Intent to being handled by the Skype for Android client only.
-        myIntent.setComponent(new ComponentName("com.skype.raider", "com.skype.raider.Main"));
-        myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-        // Initiate the Intent. It should never fail because you've already established the
-        // presence of its handler (although there is an extremely minute window where this could fail,
-        // but you don't need to worry about that here).
-        myContext.startActivity(myIntent);
-
-        return;
-    }
-
-    public void goToMarket(Context myContext) {
-        Uri marketUri = Uri.parse("market://details?id=com.skype.raider");
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, marketUri);
-        myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        // Check if there is an activity available that can handle the intent
         if (myIntent.resolveActivity(myContext.getPackageManager()) != null) {
             myContext.startActivity(myIntent);
+        } else {
+            Toast.makeText(myContext, "No application can handle this request."
+                    + " Please install a webbrowser",  Toast.LENGTH_LONG).show();
+            myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.skype.com"));
         }
         return;
     }
@@ -73,6 +62,14 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonView
         return (true);
     }
 
+    public void goToMarket(Context myContext) {
+        Uri marketUri = Uri.parse("market://details?id=com.skype.raider");
+        Intent myIntent = new Intent(Intent.ACTION_VIEW, marketUri);
+        myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        myContext.startActivity(myIntent);
+
+        return;
+    }
     public List<Person> mListPerson;
 
     public PersonAdapter(List<Person> mListPerson, WebFragment webFragment) {
@@ -101,7 +98,8 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonView
             holder.imageAvatar.setImageResource(R.drawable.img_ava);
         }
         else {
-            holder.imageAvatar.setImageResource(person.getImageResId());
+            holder.imageAvatar.setImageResource(R.drawable.img_ava);
+//            holder.imageAvatar.setImageResource(person.getImageResId());
         }
 
         /*if (imageUri == null || imageUri.equals("Image Default")) {
