@@ -140,10 +140,10 @@ public class WebFragment extends Fragment {
 
         if (listPerson == null) {
             listPerson = new ArrayList<>();
-            listPerson.add(new Person("Lê Phan Nguyên Đạt", "0943205123", R.drawable.img_ava, "live:.cid.f3b242efa0f1ec30"));
+            /*listPerson.add(new Person("Lê Phan Nguyên Đạt", "0943205123", R.drawable.img_ava, "live:.cid.f3b242efa0f1ec30"));
             listPerson.add(new Person("Trần Thị Ngọc Trâm", "0853161892", R.drawable.img_ava, "live:.cid.1d3e048641a89a6b"));
             listPerson.add(new Person("Nguyễn Ngọc Vân Châu", "0971314205", R.drawable.img_ava, "live:.cid.255c8733b13201a"));
-            savePersons();
+            savePersons();*/
         }
 
         for (Person person : listPerson) {
