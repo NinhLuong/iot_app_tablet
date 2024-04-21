@@ -98,8 +98,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonView
             holder.imageAvatar.setImageResource(R.drawable.img_ava);
         }
         else {
-            holder.imageAvatar.setImageResource(R.drawable.img_ava);
-//            holder.imageAvatar.setImageResource(person.getImageResId());
+            holder.imageAvatar.setImageResource(person.getImageResId());
         }
 
         /*if (imageUri == null || imageUri.equals("Image Default")) {
