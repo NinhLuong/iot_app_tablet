@@ -21,6 +21,11 @@
           <theme>@style/Theme.Iot_app</theme>
         </config>
       </layout>
+      <layout url="file://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-34/data/res/layout/simple_spinner_item.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_change_pw.xml">
         <config>
           <theme>@style/Theme.Iot_app</theme>
@@ -161,6 +166,11 @@
           <theme>@style/Theme.Iot_app</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_bottom_nav.xml">
+        <config>
+          <theme>@style/Theme.Iot_app</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_edit.xml">
         <config>
           <theme>@style/Theme.Iot_app</theme>
@@ -172,16 +182,46 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7229b9a8-62a0-4554-8f7a-09c8217f46c1" name="Changes" comment="add code web fragment add information(name, phone, image) and save image fix error when reopen will lost image">
+    <list default="true" id="7229b9a8-62a0-4554-8f7a-09c8217f46c1" name="Changes" comment="add code video call, not auto add 5 People">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/GridSpacingItemDecoration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/blue_button_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/item_call_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/recyclerview_bacground.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/SharedViewModel.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/StatusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/StatusService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/webview_page/PersonAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/webview_page/PersonAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/webview_page/WebFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/webview_page/WebFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/det.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/tran_tram_cut.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/van_chau.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/van_chau.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/AirFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/AirFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/DetailFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/DetailFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/Device.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/DeviceAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/DeviceAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/FanFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/FanFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/LampFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/LampFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/home_page/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/home_page/HomeFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/home_page/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/home_page/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/home_page/RoomAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/home_page/RoomAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/color/tab_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/color/tab_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/add_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/add_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/button_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/button_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/cold_storage.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/cold_storage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/custom_switch_selector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/custom_switch_selector.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/switch_off.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/switch_off.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/tab_corners_shape.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/tab_corners_shape.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/add_person_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/add_person_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/add_room_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/add_room_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/device_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/device_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_air.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_air.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_fan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_fan.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_lamp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_lamp.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_person.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_person.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_room.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_room.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +231,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[192.168.1.100:5555]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\haininh\.android\avd\Pixel_Tablet_API_25.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -218,10 +258,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="resourceFile" />
         <option value="Kotlin Class" />
         <option value="valueResourceFile" />
         <option value="layoutResourceFile" />
+        <option value="resourceFile" />
         <option value="Class" />
       </list>
     </option>
@@ -304,6 +344,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;recommended.upgrade.do.not.ask.for.project&quot;: &quot;true&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Console Font&quot;,
+    &quot;show.do.not.copy.http.proxy.settings.to.gradle&quot;: &quot;true&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -633,22 +674,6 @@
       <option name="project" value="LOCAL" />
       <updated>1701389422563</updated>
     </task>
-    <task id="LOCAL-00024" summary="update code">
-      <option name="closed" value="true" />
-      <created>1702397184384</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1702397184384</updated>
-    </task>
-    <task id="LOCAL-00025" summary="update code">
-      <option name="closed" value="true" />
-      <created>1702397239267</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1702397239267</updated>
-    </task>
     <task id="LOCAL-00026" summary="update code add full func not data">
       <option name="closed" value="true" />
       <created>1702919139376</created>
@@ -833,7 +858,31 @@
       <option name="project" value="LOCAL" />
       <updated>1713531509953</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="add code video call, not auto add 5 People">
+      <option name="closed" value="true" />
+      <created>1713698031340</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1713698031340</updated>
+    </task>
+    <task id="LOCAL-00050" summary="add code video call, not auto add 5 People">
+      <option name="closed" value="true" />
+      <created>1713698053279</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1713698053279</updated>
+    </task>
+    <task id="LOCAL-00051" summary="add code video call, not auto add 5 People">
+      <option name="closed" value="true" />
+      <created>1713698133896</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1713698133896</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -863,7 +912,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add code RecyclerView" />
     <MESSAGE value="add code button add" />
     <MESSAGE value="add code add device, room" />
     <MESSAGE value="add code delete" />
@@ -888,6 +936,7 @@
     <MESSAGE value="add code web fragment add information" />
     <MESSAGE value="add code web fragment add information(name, phone, image) and save image but when reopen will lost image" />
     <MESSAGE value="add code web fragment add information(name, phone, image) and save image fix error when reopen will lost image" />
-    <option name="LAST_COMMIT_MESSAGE" value="add code web fragment add information(name, phone, image) and save image fix error when reopen will lost image" />
+    <MESSAGE value="add code video call, not auto add 5 People" />
+    <option name="LAST_COMMIT_MESSAGE" value="add code video call, not auto add 5 People" />
   </component>
 </project>

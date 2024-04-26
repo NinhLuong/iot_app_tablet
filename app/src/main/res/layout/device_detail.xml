@@ -1,69 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="150dp"
-    android:layout_height="190dp"
+    android:layout_width="200dp"
+    android:layout_height="230dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
-    android:layout_margin="15dp"
+    android:layout_margin="20dp"
     app:cardCornerRadius="20dp"
-    app:cardElevation="3dp">
+    app:cardElevation="5dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="20dp"
-        android:layout_marginHorizontal="13dp">
+        android:orientation="vertical"
+        android:layout_marginHorizontal="10dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/imgDevice"
-                android:layout_width="43dp"
-                android:layout_height="43dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:src="@drawable/led_off"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Switch
                 android:id="@+id/swtDevice"
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="78dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
                 android:thumb="@drawable/thumb"
-                android:track="@drawable/track"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:track="@drawable/track" />
+        </LinearLayout>
 
 
         <TextView
             android:id="@+id/txtNameDevice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="55dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="5dp"
             android:text="Desk lamp"
             android:textColor="@color/gray_800"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+            android:textSize="28dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtDetail"
+            android:layout_marginStart="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="10dp"
             android:text="OFF"
             android:textColor="#2C4457"
-            android:textSize="16dp"
+            android:textSize="24dp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtNameDevice" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>

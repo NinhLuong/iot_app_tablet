@@ -10,7 +10,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#8B7FDF" />
+        android:background="#5BBCFF" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -82,9 +82,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Temperature"
+                    android:text="Nhiệt độ"
                     android:textColor="@color/white"
-                    android:textSize="16dp"
+                    android:textSize="20dp"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -152,9 +152,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Humidity"
+                    android:text="Độ ẩm"
                     android:textColor="@color/white"
-                    android:textSize="16dp"
+                    android:textSize="20dp"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -165,12 +165,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/linearLayout2"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="0dp">
+        android:background="@drawable/recyclerview_bacground"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="10dp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcv_detail"
+            android:layout_marginStart="100dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 

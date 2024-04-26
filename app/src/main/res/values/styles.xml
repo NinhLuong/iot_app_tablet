@@ -6,6 +6,11 @@
         <item name="android:fontFamily">@font/poppins</item>
         <item name="android:textFontWeight" tools:targetApi="p">700</item>
     </style>
+
+    <style name="BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:textSize">24sp</item> <!-- Set your desired size here -->
+    </style>
+
     <style name="txtPoppinsbold30">
         <item name="android:textSize">@dimen/_30pxh</item>
         <item name="android:textColor">@color/deep_purple_400</item>

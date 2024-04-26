@@ -1,5 +1,6 @@
 package com.example.iot_app.home_page;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 import static androidx.core.content.ContextCompat.getSystemService;
 
 import android.Manifest;
@@ -38,8 +39,9 @@ import android.widget.Toast;
 
 import com.example.iot_app.MainActivity;
 import com.example.iot_app.R;
-import com.example.iot_app.SharedViewModel;
+//import com.example.iot_app.SharedViewModel;
 import com.example.iot_app.StatusService;
+import com.example.iot_app.device.Device;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -56,24 +58,20 @@ import org.json.JSONObject;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
 import cz.msebera.android.httpclient.Header;
 
 public class HomeFragment extends Fragment {
-
     private RecyclerView rcvData;
-    // A private variable for RecyclerView, which lets you display data in a scrolling list.
     private RoomAdapter roomAdapter;
-
-    // A private variable for RoomAdapter, which binds data to views that are displayed within a RecyclerView.
-    private List<Room> listRoom;
-    // A private variable for a list of Room objects.
-
+    private ArrayList<Room> listRoom;
+    private HashMap<String, Device> hmDevice;
     private MainActivity mainActivity;
-
-    private SharedViewModel viewModel;
+//    private SharedViewModel viewModel;
     private TextView userName;
 
     final String OpenWeatherAPI = "40f1a0e03d3137aa8d8d47e1e37ca0dc";
@@ -83,6 +81,7 @@ public class HomeFragment extends Fragment {
 
     private String latitude ="" ;
     private String longitude ="" ;
+
     String name = "";
 
     TextView NameofCity, Temperature, Humidity, dateTime;
@@ -102,6 +101,7 @@ public class HomeFragment extends Fragment {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("rooms");
     DatabaseReference myRefBot = database.getReference("robot");
+    DatabaseReference callStatusRef = myRefBot.child("call_status");
 
 
     @Override
@@ -109,6 +109,13 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        Log.d("Room", String.valueOf(R.drawable.cold_storage));
+        Log.d("Living Room", String.valueOf(R.drawable.living_room));
+        Log.d("Bath Room", String.valueOf(R.drawable.bathroom));
+        Log.d("Bed Room", String.valueOf(R.drawable.bedroom));
+        Log.d("Kitchen Room", String.valueOf(R.drawable.kitchen_room));
+        callStatusRef.setValue("false");
 
         Intent intent = new Intent(getActivity(), StatusService.class);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -168,61 +175,40 @@ public class HomeFragment extends Fragment {
         });*/
 
 
-        userName = view.findViewById(R.id.userName);
+//        userName = view.findViewById(R.id.userName);
         rcvData = view.findViewById(R.id.rcv_data);
-
-        userName.setText("Hi");
-        // Find a view that was identified by the 'rcv_data' id attribute in XML layout file and assign it to 'rcvData'.
+//        userName.setText("Hi");
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 3);
         rcvData.setLayoutManager(gridLayoutManager);
-        // Set 'rcvData' to use a linear layout manager (which arranges its children in a single column).
-        //    Create a new DividerItemDecoration with current context and vertical orientation.
 
-        viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
-//        viewModel.loadData(getContext());
-        // Get an instance of SharedViewModel associated with this activity.
+        /*viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
 
-        // Observe changes to list of rooms in SharedViewModel.
-        // The second parameter is an observer that gets notified when list of rooms changes.
         viewModel.getRooms().observe(getViewLifecycleOwner(), new Observer<List<Room>>() {
-            // This method is called when list of rooms changes.
+
             @Override
             public void onChanged(List<Room> rooms) {
                 roomAdapter.setRooms(rooms);
                 // Update rooms in 'roomAdapter'.
                 roomAdapter.notifyDataSetChanged();
-                // Notify 'roomAdapter' that underlying data has changed and it should refresh itself.
-            }
-        });
 
-        // Find a view that was identified by 'btnAddRoom' id attribute in XML layout file and assign it to 'btnAddRoom'.
+            }
+        });*/
+
         FloatingActionButton btnAddRoom = view.findViewById(R.id.btnAddRoom);
-        // Set an OnClickListener on 'btnAddRoom'. This listener gets notified when 'btnAddRoom' is clicked or tapped.
         btnAddRoom.setOnClickListener(new View.OnClickListener() {
-            // This method is called when 'btnAddRoom' is clicked or tapped.
             @Override
             public void onClick(View v) {
-                // Create a new dialog instance with current context.
                 Dialog dialog = new Dialog(getContext());
-                // Set the content view of this dialog. The layout resource is 'add_room_layout'.
                 dialog.setContentView(R.layout.add_area_layout);
                 dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_background);
-                // Set the background of this dialog window using a drawable resource.
 
                 EditText edtNameRoom = dialog.findViewById(R.id.edtNameArea);
-                /*EditText edtLati= dialog.findViewById(R.id.edtLati);
-                EditText edtLongi= dialog.findViewById(R.id.edtLongi);*/
 
                 Button btnAdd = dialog.findViewById(R.id.btnAddArea);
-
-// Set an OnClickListener on 'btnAdd'. This listener gets notified when 'btnAdd' is clicked or tapped.
                 btnAdd.setOnClickListener(new View.OnClickListener() {
-                    // This method is called when 'btnAdd' is clicked or tapped.
                     @Override
                     public void onClick(View view) {
-
-
                         if(!edtNameRoom.getText().toString().equals("") ){
                             name = edtNameRoom.getText().toString();
                             Log.d("latitude firebase", latitude);
@@ -230,30 +216,42 @@ public class HomeFragment extends Fragment {
 
                             //Assign the text in 'edtNameRoom' to 'name'.
                             Room newRoom = new Room(R.drawable.cold_storage, name , "0 device");
-                            // Create a new Room object with default image, name from 'edtNameRoom', and "0 device".
-                            myRef.child(name).child("Temp").setValue("null");
-                            myRef.child(name).child("Hum").setValue("null");
 
-
-                            viewModel.addRoom(newRoom);
-                            // Add the new room to SharedViewModel.
-//                            viewModel.saveData(getContext());
+                            hmDevice = new HashMap<>();
+                            Room newRoom1 = new Room(R.drawable.cold_storage, name , "0 device", "null", "null","null", hmDevice);
+                            myRef.child(name).setValue(newRoom1);
+                            // viewModel.addRoom(newRoom);
                             dialog.dismiss();
                         }
                         else {
                             Toast.makeText(getContext(), "Hãy nhập đầy đủ thông tin!", Toast.LENGTH_LONG).show();
                         }
-
                     }
                 });
-
                 dialog.show();
             }
         });
 
-        // Create a new RoomAdapter with list of rooms and assign it to 'roomAdapter'.
+        listRoom = new ArrayList<>();
+        myRef.child(name).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                listRoom.clear();
+                for (DataSnapshot roomSnapshot : dataSnapshot.getChildren()) {
+                    Room room = roomSnapshot.getValue(Room.class);
+                    listRoom.add(room);
+                }
+                roomAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+
         roomAdapter = new RoomAdapter(listRoom);
-        // Set the adapter for 'rcvData' to be 'roomAdapter'.
         rcvData.setAdapter(roomAdapter);
 
         locationManager = (LocationManager) requireActivity().getSystemService(Context.LOCATION_SERVICE);
@@ -275,30 +273,31 @@ public class HomeFragment extends Fragment {
     }
 
     private void startLocationUpdates() {
-    new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
-        @Override
-        public void run() {
-            // Check if the app has location permission again (just in case)
-            if (ContextCompat.checkSelfPermission(fragmentContext, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-                // Check if the "network" provider is available
-                try {
-                    locationManager.getProvider(LocationManager.NETWORK_PROVIDER);
-                    locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
-                } catch (IllegalArgumentException e) {
-                    Log.e("Location", "Network provider does not exist", e);
-                    // Handle the case where the network provider does not exist
+        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // Check if the app has location permission again (just in case)
+                if (ContextCompat.checkSelfPermission(fragmentContext, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                    // Check if the "network" provider is available
+                    try {
+                        locationManager.getProvider(LocationManager.NETWORK_PROVIDER);
+                        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
+                    } catch (IllegalArgumentException e) {
+                        Log.e("Location", "Network provider does not exist", e);
+                        // Handle the case where the network provider does not exist
+                    }
                 }
             }
-        }
-    }, 2000);
-}
+        }, 2000);
+    }
+
     private final LocationListener locationListener = new LocationListener() {
         @Override
         public void onLocationChanged(@NonNull Location location) {
             // Get location
-             latitude = String.valueOf(location.getLatitude());
-             Log.d("latitude", latitude);
-             longitude = String.valueOf(location.getLongitude());
+            latitude = String.valueOf(location.getLatitude());
+            Log.d("latitude", latitude);
+            longitude = String.valueOf(location.getLongitude());
             Log.d("longitude", longitude);
             myRefBot.child("Longitude").setValue(longitude);
             myRefBot.child("Latitude").setValue(latitude);

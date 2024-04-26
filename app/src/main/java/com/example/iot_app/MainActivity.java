@@ -29,17 +29,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        // Retrieve and hold the contents of the preferences file 'MyApp', returning a SharedPreferences through which you can retrieve and modify its values.
         SharedPreferences prefs = getSharedPreferences("MyApp", MODE_PRIVATE);
-        // Retrieve a String value from the preferences.
         String json = prefs.getString("rooms", "[]");
 //        String json1 = prefs.getString("devices", "[]");
 
-        SharedViewModel viewModel = new ViewModelProvider(this).get(SharedViewModel.class);
-        // Get a ViewModelProvider, which retains ViewModels while a scope (an activity or a fragment) is alive. Then get the SharedViewModel class from the ViewModelProvider.
-        viewModel.jsonToRooms(json);
-//        viewModel.jsonToRoomsArea(json1);
-        // Convert the JSON string back to rooms using a method in the ViewModel.
+        /*SharedViewModel viewModel = new ViewModelProvider(this).get(SharedViewModel.class);
+        viewModel.jsonToRooms(json);*/
     }
 //    public String getGusername() {
 //        return this.gusername;
@@ -104,23 +99,15 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onStop() {
-        // Called when you are no longer visible to the user.
         super.onStop();
         SharedPreferences prefs = getSharedPreferences("MyApp", MODE_PRIVATE);
-        // Retrieve and hold the contents of the preferences file 'MyApp', returning a SharedPreferences through which you can retrieve and modify its values.
         SharedPreferences.Editor editor = prefs.edit();
-        // Create a new Editor for these preferences, through which you can make modifications to the data in the preferences and atomically commit those changes back to the SharedPreferences object.
-        // Get a ViewModelProvider, which retains ViewModels while a scope (an activity or a fragment) is alive. Then get the SharedViewModel class from the ViewModelProvider.
-        SharedViewModel viewModel = new ViewModelProvider(this).get(SharedViewModel.class);
-        // Convert rooms to JSON string using a method in ViewModel.
-        String json = viewModel.roomsToJson();
+//        String json = viewModel.roomsToJson();
 //        String json1 = viewModel.roomsAreaToJson();
 
-        editor.putString("rooms", json);
+//        editor.putString("rooms", json);
 //        editor.putString("devices", json1);
-        // Set a String value in the preferences editor, to be written back once commit() or apply() are called.
         editor.apply();
-        // Commit your preferences changes back from this Editor to the SharedPreferences object it is editing. This atomically performs the requested modifications, replacing whatever is currently in the SharedPreferences.
     }
 
     @Override

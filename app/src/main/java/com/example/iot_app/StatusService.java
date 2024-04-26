@@ -161,6 +161,7 @@ public class StatusService extends Service {
                     initiateSkypeUri(getApplicationContext(), "skype:" + idSkype + "?call&video=true");
                     // After the call, update the callStatusRef value in Firebase to true
                     callStatusRef.setValue("true");
+                    idSkypeRef.setValue("null");
                 } else {
                     // If the call was not made, update the callStatusRef value in Firebase to false
                     callStatusRef.setValue("false");

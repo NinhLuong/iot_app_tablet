@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -45,14 +43,14 @@
                 android:layout_marginTop="60dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:text="Power"
-                android:textSize="18sp"
+                android:text="Nút bật/tắt quạt"
+                android:textSize="26sp"
                 android:textStyle="bold" />
 
             <Switch
                 android:id="@+id/switchFan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
                 android:layout_margin="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3"
@@ -75,8 +73,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Intensity"
-                        android:textSize="18dp"
+                        android:text="Tốc độ quay"
+                        android:textSize="24dp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +85,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="35%"
-                        android:textSize="16dp"
+                        android:textSize="24dp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -118,7 +116,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="5%"
-                        android:textSize="16dp"
+                        android:textSize="20dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -128,7 +126,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="100%"
-                        android:textSize="16dp"
+                        android:textSize="24dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -143,12 +141,13 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mode"
+                    android:text="Chế độ"
                     android:textSize="22dp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -166,7 +165,8 @@
                             android:background="@drawable/custom_radio_selector"
                             android:button="@color/color_temp"
                             android:gravity="center"
-                            android:text="Low"
+                            android:text="Chậm"
+                            android:textSize="20dp"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             android:layout_width="100dp"
@@ -178,10 +178,11 @@
                             android:textColor="@drawable/custom_radio_text_color_selector"
                             android:button="@color/color_temp"
                             android:gravity="center"
-                            android:text="Medium"
+                            android:text="Trung bình"
+                            android:textSize="20dp"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:layout_width="100dp"
+                            android:layout_width="150dp"
                             android:layout_height="55dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginRight="20dp"/>
@@ -194,7 +195,8 @@
                             android:background="@drawable/custom_radio_selector"
                             android:button="@color/color_temp"
                             android:gravity="center"
-                            android:text="High" />
+                            android:textSize="20dp"
+                            android:text="Nhanh" />
                     </RadioGroup>
                 </LinearLayout>
 
