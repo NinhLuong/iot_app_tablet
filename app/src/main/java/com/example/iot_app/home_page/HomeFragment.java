@@ -215,10 +215,10 @@ public class HomeFragment extends Fragment {
                             Log.d("longitude firebase", longitude);
 
                             //Assign the text in 'edtNameRoom' to 'name'.
-                            Room newRoom = new Room(R.drawable.cold_storage, name , "0 device");
+//                            Room newRoom = new Room(R.drawable.cold_storage, name , "0 Thiết bị");
 
                             hmDevice = new HashMap<>();
-                            Room newRoom1 = new Room(R.drawable.cold_storage, name , "0 device", "null", "null","null", hmDevice);
+                            Room newRoom1 = new Room(R.drawable.cold_storage, name , "0 Thiết bị", "null", "null","null", hmDevice);
                             myRef.child(name).setValue(newRoom1);
                             // viewModel.addRoom(newRoom);
                             dialog.dismiss();

@@ -45,6 +45,7 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.RoomViewHolder
         }
         holder.txtRoom.setText(room.getRoom());
         holder.imageAvatar.setImageResource(room.getResourceId());
+
         String deviceText = room.getDeviceCount() + " Thiết bị";
         holder.txtDevice.setText(deviceText);
         FirebaseDatabase database = FirebaseDatabase.getInstance();

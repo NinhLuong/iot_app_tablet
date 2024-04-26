@@ -27,7 +27,7 @@
         android:label="IoT Control"
 
         android:supportsRtl="true"
-        android:theme="@style/Theme.Iot_app"
+        android:theme="@style/AppTheme"
         tools:targetApi="25">
         <activity
             android:name=".account_page.ChangePW"

@@ -18,7 +18,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/bg_weather"
             android:elevation="4dp"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
@@ -33,7 +33,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="180dp"
                 android:layout_height="180dp"
-                android:backgroundTint="@color/color_temp"
+                android:backgroundTint="@color/bg_weather"
                 app:cardCornerRadius="500dp"
                 app:cardElevation="20dp"
                 android:layout_gravity="center"
@@ -71,7 +71,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:text="Nút bật/tắt điều hòa"
-                android:textSize="24sp"
+                android:textSize="26sp"
                 android:textStyle="bold" />
 
             <Switch
@@ -101,8 +101,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Intensity"
-                        android:textSize="22dp"
+                        android:text="Điều chỉnh nhiệt độ"
+                        android:textSize="24dp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -161,8 +161,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mode"
-                    android:textSize="22dp"
+                    android:text="Chế độ"
+                    android:textSize="24dp"
                     android:textStyle="bold"/>
 
                 <LinearLayout
@@ -181,7 +181,7 @@
                             android:background="@drawable/custom_radio_selector"
                             android:button="@color/color_temp"
                             android:drawableEnd="@drawable/custom_icon_hot_selector"
-                            android:text="Hot"
+                            android:text="Ấm"
                             android:textSize="18dp"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
@@ -194,7 +194,7 @@
                             android:textColor="@drawable/custom_radio_text_color_selector"
                             android:button="@color/color_temp"
                             android:drawableEnd="@drawable/custom_icon_cold_selector"
-                            android:text="Cold"
+                            android:text="Lạnh"
                             android:textSize="18dp"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
@@ -214,7 +214,7 @@
                             android:paddingLeft="10dp"
                             android:textSize="18dp"
                             android:paddingRight="10dp"
-                            android:text="Normal" />
+                            android:text="Vừa" />
                     </RadioGroup>
                 </LinearLayout>
 
@@ -241,7 +241,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Auto"
+                            android:text="Tự động"
                             android:textStyle="bold"
                             android:textSize="20dp"/>
 
@@ -263,7 +263,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Temperature"
+                            android:text="Nhiệt độ"
                             android:textSize="16dp"/>
 
                         <LinearLayout

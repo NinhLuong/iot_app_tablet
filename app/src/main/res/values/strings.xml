@@ -1,8 +1,8 @@
 <resources>
     <string-array name="device_types_array">
-        <item>Đèn</item>
-        <item>Điều hòa</item>
-        <item>Quạt</item>
+        <item>Light</item>
+        <item>Air Condition</item>
+        <item>Fan</item>
     </string-array>
     <string name="app_name">IoT Control</string>
     <string name="action_home">Trang Chủ</string>

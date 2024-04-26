@@ -16,7 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/bg_weather"
             android:elevation="4dp"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
@@ -178,11 +178,11 @@
                             android:textColor="@drawable/custom_radio_text_color_selector"
                             android:button="@color/color_temp"
                             android:gravity="center"
-                            android:text="Trung bình"
+                            android:text="Vừa"
                             android:textSize="20dp"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:layout_width="150dp"
+                            android:layout_width="100dp"
                             android:layout_height="55dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginRight="20dp"/>

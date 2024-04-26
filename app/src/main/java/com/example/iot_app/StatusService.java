@@ -164,7 +164,7 @@ public class StatusService extends Service {
                     idSkypeRef.setValue("null");
                 } else {
                     // If the call was not made, update the callStatusRef value in Firebase to false
-                    callStatusRef.setValue("false");
+//                    callStatusRef.setValue("false");
                 }
             }
 
