@@ -182,32 +182,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7229b9a8-62a0-4554-8f7a-09c8217f46c1" name="Changes" comment="fix error not synchronize all data about the number of Rooms and devices, change UI. bug: add device not appear right now and crash when back in the first add">
+    <list default="true" id="7229b9a8-62a0-4554-8f7a-09c8217f46c1" name="Changes" comment=" change UI. bug: add device not appear right now and crash when back in the first add">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/StatusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/StatusService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/home_page/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/home_page/HomeFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/home_page/RoomAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/home_page/RoomAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ac_off.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ac_off.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ac_on.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ac_on.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/custom_switch_selector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/custom_switch_selector.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/fan.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/fan.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/fan_off.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/fan_off.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/fan_on.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/fan_on.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_fan_off.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_fan_off.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_fan_on.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_fan_on.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/led_off.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/led_off.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/led_on.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/led_on.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/add_device_room_layout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_air.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_air.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_detail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_fan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_fan.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_lamp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_lamp.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_device.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_room.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_room.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/DetailFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/DetailFragment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +194,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[192.168.1.100:5555]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\haininh\.android\avd\Pixel_Tablet_API_25.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -660,14 +637,6 @@
       <option name="project" value="LOCAL" />
       <updated>1701389422563</updated>
     </task>
-    <task id="LOCAL-00027" summary="update code add full func control device">
-      <option name="closed" value="true" />
-      <created>1702987066087</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1702987066087</updated>
-    </task>
     <task id="LOCAL-00028" summary="update code add full func control device and update data">
       <option name="closed" value="true" />
       <created>1703001743716</created>
@@ -868,7 +837,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714100258139</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary=" change UI. bug: add device not appear right now and crash when back in the first add">
+      <option name="closed" value="true" />
+      <created>1714127246902</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1714127246903</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -898,7 +875,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add code add device, room" />
     <MESSAGE value="add code delete" />
     <MESSAGE value="add code curtom button add" />
     <MESSAGE value="add code save status" />
@@ -923,6 +899,7 @@
     <MESSAGE value="add code web fragment add information(name, phone, image) and save image fix error when reopen will lost image" />
     <MESSAGE value="add code video call, not auto add 5 People" />
     <MESSAGE value="fix error not synchronize all data about the number of Rooms and devices, change UI. bug: add device not appear right now and crash when back in the first add" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix error not synchronize all data about the number of Rooms and devices, change UI. bug: add device not appear right now and crash when back in the first add" />
+    <MESSAGE value=" change UI. bug: add device not appear right now and crash when back in the first add" />
+    <option name="LAST_COMMIT_MESSAGE" value=" change UI. bug: add device not appear right now and crash when back in the first add" />
   </component>
 </project>

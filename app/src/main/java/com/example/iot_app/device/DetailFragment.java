@@ -182,6 +182,7 @@ public class DetailFragment extends Fragment {
             listDevice = new ArrayList<>();
 //            viewModel.getRooms().getValue().get(indexArea).setDevices((ArrayList<Device>) listDevice);
         }
+
         FloatingActionButton btnAddDevice = view.findViewById(R.id.btnAddDevice);
         btnAddDevice.setOnClickListener(new View.OnClickListener() {
             @Override
