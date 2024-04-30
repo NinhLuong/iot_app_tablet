@@ -71,11 +71,6 @@
           <theme>@style/Theme.Iot_app</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/add_device_room_layout.xml">
-        <config>
-          <theme>@style/Theme.Iot_app</theme>
-        </config>
-      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/add_person_layout.xml">
         <config>
           <theme>@style/Theme.Iot_app</theme>
@@ -151,11 +146,6 @@
           <theme>@style/Theme.Iot_app</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_device.xml">
-        <config>
-          <theme>@style/Theme.Iot_app</theme>
-        </config>
-      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_person.xml">
         <config>
           <theme>@style/Theme.Iot_app</theme>
@@ -182,9 +172,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7229b9a8-62a0-4554-8f7a-09c8217f46c1" name="Changes" comment=" change UI. bug: add device not appear right now and crash when back in the first add">
+    <list default="true" id="7229b9a8-62a0-4554-8f7a-09c8217f46c1" name="Changes" comment=" change UI. bug: add device not appear right now and crash when back in the first add,not change list option item to vietnamese">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/DetailFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/DetailFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/Device.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/FanFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/FanFragment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -637,14 +629,6 @@
       <option name="project" value="LOCAL" />
       <updated>1701389422563</updated>
     </task>
-    <task id="LOCAL-00028" summary="update code add full func control device and update data">
-      <option name="closed" value="true" />
-      <created>1703001743716</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1703001743716</updated>
-    </task>
     <task id="LOCAL-00029" summary="update code add full func control device and update data">
       <option name="closed" value="true" />
       <created>1703049468933</created>
@@ -845,7 +829,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714127246903</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary=" change UI. bug: add device not appear right now and crash when back in the first add,not change list option item to vietnamese">
+      <option name="closed" value="true" />
+      <created>1714185131245</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1714185131245</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -875,7 +867,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add code delete" />
     <MESSAGE value="add code curtom button add" />
     <MESSAGE value="add code save status" />
     <MESSAGE value="add code to custom UI" />
@@ -900,6 +891,7 @@
     <MESSAGE value="add code video call, not auto add 5 People" />
     <MESSAGE value="fix error not synchronize all data about the number of Rooms and devices, change UI. bug: add device not appear right now and crash when back in the first add" />
     <MESSAGE value=" change UI. bug: add device not appear right now and crash when back in the first add" />
-    <option name="LAST_COMMIT_MESSAGE" value=" change UI. bug: add device not appear right now and crash when back in the first add" />
+    <MESSAGE value=" change UI. bug: add device not appear right now and crash when back in the first add,not change list option item to vietnamese" />
+    <option name="LAST_COMMIT_MESSAGE" value=" change UI. bug: add device not appear right now and crash when back in the first add,not change list option item to vietnamese" />
   </component>
 </project>

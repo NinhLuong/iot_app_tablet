@@ -87,8 +87,14 @@ public class FanFragment extends Fragment {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // Get the data from the snapshot
-                fanStatus = dataSnapshot.getValue(boolean.class);
+                fanStatus = dataSnapshot.getValue(Boolean.class);
                 Log.d("fanStatus", "Value is: " + fanStatus);
+
+//                Boolean value = dataSnapshot.getValue(Boolean.class);
+//                if (value != null) {
+//                    boolean fanStatus = value.booleanValue();
+//                    // rest of your code
+//                }
 
                 switchFan.setChecked(fanStatus);
                 if(fanStatus){
