@@ -44,7 +44,18 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.RoomViewHolder
             return ;
         }
         holder.txtRoom.setText(room.getRoom());
-        holder.imageAvatar.setImageResource(room.getResourceId());
+        if(room.getRoom().equals( "Phòng khách")){
+            holder.imageAvatar.setImageResource(R.drawable.living_room);
+        } else if(room.getRoom().equals("Phòng ngủ") ){
+            holder.imageAvatar.setImageResource(R.drawable.bedroom);
+        } else if(room.getRoom().equals("Phòng bếp") ){
+            holder.imageAvatar.setImageResource(R.drawable.kitchen_room);
+        } else if(room.getRoom().equals("Phòng tắm")){
+            holder.imageAvatar.setImageResource(R.drawable.bathroom);
+        } else{
+            holder.imageAvatar.setImageResource(R.drawable.cold_storage);
+        }
+//        holder.imageAvatar.setImageResource(room.getResourceId());
 
         String deviceText = room.getDeviceCount() + " Thiết bị";
         holder.txtDevice.setText(deviceText);

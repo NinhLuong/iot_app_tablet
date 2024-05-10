@@ -121,6 +121,11 @@
           <theme>@style/Theme.Iot_app</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_health.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
         <config>
           <theme>@style/Theme.Iot_app</theme>
@@ -172,11 +177,16 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7229b9a8-62a0-4554-8f7a-09c8217f46c1" name="Changes" comment=" change UI. bug: add device not appear right now and crash when back in the first add,not change list option item to vietnamese">
+    <list default="true" id="7229b9a8-62a0-4554-8f7a-09c8217f46c1" name="Changes" comment=" fix bug: add device not appear right now and crash when back in the first add,  fix error when delete a Fan device, not change list option item to vietnamese">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_health.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/account_page/AccountFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/account_page/AccountFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/DetailFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/DetailFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/Device.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/FanFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/device/FanFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/home_page/RoomAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iot_app/home_page/RoomAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_account.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_account.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +196,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\haininh\.android\avd\Pixel_Tablet_API_25.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\haininh\.android\avd\Pixel_Tablet_API_25.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -215,9 +225,9 @@
       <list>
         <option value="Kotlin Class" />
         <option value="valueResourceFile" />
-        <option value="layoutResourceFile" />
         <option value="resourceFile" />
         <option value="Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -278,9 +288,11 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Android App.app.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;android-custom-viewC:/Users/haininh/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.3.0/f4de7876e10ff121102f131b26d4a98b1613a012/recyclerview-1.3.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED&quot;: &quot;RecyclerView&quot;,
@@ -292,14 +304,15 @@
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;D:/android/iot_app/app/src/main/res/drawable&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/android/iot_app_tablet/app/src/main/res/layout&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/android/iot_app_tablet&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;recommended.upgrade.do.not.ask.for.project&quot;: &quot;true&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Console Font&quot;,
-    &quot;show.do.not.copy.http.proxy.settings.to.gradle&quot;: &quot;true&quot;,
+    &quot;show.do.not.copy.http.proxy.settings.to.gradle&quot;: &quot;false&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -629,14 +642,6 @@
       <option name="project" value="LOCAL" />
       <updated>1701389422563</updated>
     </task>
-    <task id="LOCAL-00029" summary="update code add full func control device and update data">
-      <option name="closed" value="true" />
-      <created>1703049468933</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1703049468933</updated>
-    </task>
     <task id="LOCAL-00030" summary="update code custom lamp">
       <option name="closed" value="true" />
       <created>1703090542812</created>
@@ -837,7 +842,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714185131245</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary=" fix bug: add device not appear right now and crash when back in the first add,  fix error when delete a Fan device, not change list option item to vietnamese">
+      <option name="closed" value="true" />
+      <created>1714468524094</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1714468524095</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -867,7 +880,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add code curtom button add" />
     <MESSAGE value="add code save status" />
     <MESSAGE value="add code to custom UI" />
     <MESSAGE value="add code to go back use button" />
@@ -892,6 +904,7 @@
     <MESSAGE value="fix error not synchronize all data about the number of Rooms and devices, change UI. bug: add device not appear right now and crash when back in the first add" />
     <MESSAGE value=" change UI. bug: add device not appear right now and crash when back in the first add" />
     <MESSAGE value=" change UI. bug: add device not appear right now and crash when back in the first add,not change list option item to vietnamese" />
-    <option name="LAST_COMMIT_MESSAGE" value=" change UI. bug: add device not appear right now and crash when back in the first add,not change list option item to vietnamese" />
+    <MESSAGE value=" fix bug: add device not appear right now and crash when back in the first add,  fix error when delete a Fan device, not change list option item to vietnamese" />
+    <option name="LAST_COMMIT_MESSAGE" value=" fix bug: add device not appear right now and crash when back in the first add,  fix error when delete a Fan device, not change list option item to vietnamese" />
   </component>
 </project>

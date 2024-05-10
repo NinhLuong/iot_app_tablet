@@ -219,12 +219,14 @@ public class HomeFragment extends Fragment {
 
                             hmDevice = new HashMap<>();
                             Room newRoom1 = new Room(R.drawable.cold_storage, name , "0 Thiết bị", "null", "null","null", hmDevice);
+                            newRoom1.setHmdevices(new HashMap<>());
                             myRef.child(name).setValue(newRoom1);
                             // viewModel.addRoom(newRoom);
                             dialog.dismiss();
                         }
                         else {
                             Toast.makeText(getContext(), "Hãy nhập đầy đủ thông tin!", Toast.LENGTH_LONG).show();
+
                         }
                     }
                 });
@@ -233,12 +235,13 @@ public class HomeFragment extends Fragment {
         });
 
         listRoom = new ArrayList<>();
-        myRef.child(name).addValueEventListener(new ValueEventListener() {
+        myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 listRoom.clear();
-                for (DataSnapshot roomSnapshot : dataSnapshot.getChildren()) {
-                    Room room = roomSnapshot.getValue(Room.class);
+                for (DataSnapshot roomSnapshot0 : dataSnapshot.getChildren()) {
+                    Log.d(TAG, "DataSnapshot: " + dataSnapshot.toString());
+                    Room room = roomSnapshot0.getValue(Room.class);
                     listRoom.add(room);
                 }
                 roomAdapter.notifyDataSetChanged();

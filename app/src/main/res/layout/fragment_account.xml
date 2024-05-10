@@ -159,12 +159,21 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
+<!--        <Button-->
+<!--            android:id="@+id/btnfollow"-->
+<!--            android:layout_width="204dp"-->
+<!--            android:layout_height="61dp"-->
+<!--            android:layout_marginTop="32dp"-->
+<!--            android:text="Follow Me"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/cardViewPhone" />-->
 
         <Button
             android:id="@+id/btnChangePass"
             android:layout_width="204dp"
             android:layout_height="61dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="30dp"
             android:text="Change Password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
